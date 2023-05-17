@@ -8,6 +8,12 @@ todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
 
+let dateinput, timeinput
+
+function getElement(){
+    dateinput = document.getElementById('dateinput');
+}
+
 function addTodo(event) {
     event.preventDefault();
     const todoDiv = document.createElement("div");
@@ -28,7 +34,8 @@ function addTodo(event) {
     trashButton.innerHTML = '<i class="fas fa-trash"></li>';
     trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
-    
+
+
     todoList.appendChild(todoDiv);
     todoInput.value = "";
 }
@@ -129,3 +136,4 @@ function removeLocalTodos(todo) {
     todos.splice(todos.indexOf(todoIndex), 1);
     localStorage.setItem("todos", JSON.stringify(todos));
 }
+
