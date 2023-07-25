@@ -102,6 +102,7 @@ function getLocalTodos() {
         todos = JSON.parse(localStorage.getItem("todos"));
     }
     todos.forEach(function(todo) {
+        
         const todoDiv = document.createElement("div");
         todoDiv.classList.add("todo");
         const newTodo = document.createElement("li");
