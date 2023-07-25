@@ -21,8 +21,7 @@ function addTodo(event) {
     const newTodo = document.createElement("li");
     newTodo.innerText = todoInput.value; 
     newTodo.classList.add("todo-item");
-    todoDiv.appendChild(newTodo);
-    //ADDING TO LOCAL STORAGE 
+    todoDiv.appendChild(newTodo); 
     saveLocalTodos(todoInput.value);
     
     const completedButton = document.createElement("button");
